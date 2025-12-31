@@ -21,6 +21,9 @@
         <span class="icon-keyboard_arrow_up text-2xl"></span>
     </div>
     {{- partial "slide.html" . -}}
+
+    <main class="bg-tlgray-200 py-6 md:py-10">{{ .Content }}</main>
+
     {{- partial "strip.html" . -}}
     {{ if ne .Site.Params.showBlog false }}
     <div class="mx-auto my-10 max-w-6xl">
