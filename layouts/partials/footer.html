@@ -43,13 +43,37 @@
   {{ end }}
   <div class="flex items-center justify-between flex-wrap bg-gray-800 p-6 text-white">
     <div class="items-center text-xl text-grey-900 mr-6">
-      <div style="display: flex; flex-direction: row; align-items: center;">
-        <img alt="Monadnock 250 Logo" class="mr-3 w-auto" style="height: 4em;" src="/img/logo.webp">
-        <img alt="NH 250 Logo" class="mr-3 w-auto" style="height: 4em;" src="/img/nh250-secondary.webp">
-        <img alt="Arts Alive Logo" class="mr-3 w-auto" style="height: 4em;" src="/img/arts-alive.webp">
-        <img alt="Keene Sentinel Logo" class="mr-3 w-auto" style="height: 4em;" src="/img/sentinel.webp">
-        <img alt="City Logo" class="mr-3 w-auto" style="height: 4em;" src="/img/cok.webp">
-        <img alt="Historical Society Logo" class="mr-3 w-auto" style="height: 4em;" src="/img/hscc.webp">
+      <style>
+        .footer-logos {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        }
+        .footer-logos img {
+          height: 4em;
+          width: auto;
+          flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+          .footer-logos img {
+            height: 3em;
+          }
+        }
+        @media (max-width: 480px) {
+          .footer-logos img {
+            height: 2.5em;
+          }
+        }
+      </style>
+      <div class="footer-logos">
+        <img alt="Monadnock 250 Logo" src="/img/logo.webp">
+        <img alt="NH 250 Logo" src="/img/nh250-secondary.webp">
+        <img alt="Arts Alive Logo" src="/img/arts-alive.webp">
+        <img alt="Keene Sentinel Logo" src="/img/sentinel.webp">
+        <img alt="City Logo" src="/img/cok.webp">
+        <img alt="Historical Society Logo" src="/img/hscc.webp">
       </div>
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
