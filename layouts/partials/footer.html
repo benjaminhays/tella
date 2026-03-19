@@ -41,64 +41,65 @@
   {{ else }}
   <link href='{{ "css/webfonts.min.css" | relURL }}' rel="stylesheet" />
   {{ end }}
-  <div class="flex items-center justify-between flex-wrap bg-gray-800 p-6 text-white">
-    <div class="items-center text-xl text-grey-900 mr-6">
+  <div class="flex items-center justify-center flex-wrap bg-gray-800 p-6 text-white">
+    <div class="w-full max-w-6xl items-center text-xl text-grey-900 text-center">
       <style>
         .footer-logos {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
+          gap: 0.8rem;
+          justify-content: center;
           align-items: center;
-          flex-wrap: wrap;
-          gap: 0.75rem;
         }
-        .footer-logos img {
+        .footer-logos-row {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 0.75rem;
+          width: 100%;
+        }
+        .footer-logos-row img {
           height: 4em;
           width: auto;
           flex-shrink: 0;
         }
-        @media (max-width: 768px) {
-          .footer-logos img {
+        .footer-logos-row img.logo-light {
+          background-color: white;
+          padding: 0.2rem;
+        }
+        @media (max-width: 1024px) {
+          .footer-logos-row img {
             height: 3em;
           }
         }
+        @media (max-width: 768px) {
+          .footer-logos-row img {
+            height: 2.2em;
+          }
+        }
         @media (max-width: 480px) {
-          .footer-logos img {
-            height: 2.5em;
+          .footer-logos-row img {
+            height: 1.8em;
           }
         }
       </style>
       <div class="footer-logos">
-        <img alt="Monadnock 250 Logo" src="/img/logo.webp">
-        <img alt="NH 250 Logo" src="/img/nh250-secondary.webp">
-        <img alt="America 250" style="background-color: white;" src="/img/america250.svg">
-        <img alt="Arts Alive Logo" src="/img/arts-alive.webp">
-        <img alt="Keene Sentinel Logo" src="/img/sentinel.webp">
-        <img alt="City Logo" src="/img/cok.webp">
-        <img alt="Historical Society Logo" src="/img/hscc.webp">
-        <img alt="Savings Bank of Walpole Logo" style="background-color: white; padding: 10px" src="/img/sbw.webp">
-        <img alt="Swampbats Logo" src="/img/swampbats.webp">
-      </div>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" id="mobileMenu">
-      <div class="text-lg lg:flex-grow">
-      </div>
-      <div class="flex flex-row items-center text-lg">
-        <a href="https://www.facebook.com/profile.php?id=61586513855761" style="font-size: 2em;" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-8">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="mailto:monadnock250@gmail.com" style="font-size: 2em;" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-8">
-          <i class="fas fa-envelope"></i>
-        </a>
-        
-        {{ range .Site.Menus.footer }}
-        <a href="{{ .URL }}" class="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-8">
-          {{ if not .Pre }}
-          {{ .Name }}
-          {{ else }}
-          {{ .Pre }}
-          {{ end }}
-        </a>
-        {{ end }}
+        <div class="footer-logos-row">
+          <img alt="Monadnock 250 Logo" src="/img/logo.webp">
+          <img alt="NH 250 Logo" src="/img/nh250-secondary.webp">
+          <img alt="America 250" class="logo-light" src="/img/america250.svg">
+          <img alt="Arts Alive Logo" src="/img/arts-alive.webp">
+          <img alt="Keene Sentinel Logo" src="/img/sentinel.webp">
+        </div>
+        <div class="footer-logos-row">
+          <img alt="City Logo" src="/img/cok.webp">
+          <img alt="Historical Society Logo" src="/img/hscc.webp">
+          <img alt="Savings Bank of Walpole Logo" class="logo-light" src="/img/sbw.webp">
+          <img alt="Swampbats Logo" src="/img/swampbats.webp">
+          <img alt="MMG" class="logo-light" src="/img/mmg.webp">
+          <img alt="DAR" class="logo-light" src="/img/dar.webp">
+        </div>
       </div>
     </div>
   </div>
