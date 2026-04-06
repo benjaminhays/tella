@@ -36,11 +36,6 @@
       document.documentElement.scrollTop = 0;
     });
   </script>
-  {{ if .Site.Params.googleFonts }}
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet" />
-  {{ else }}
-  <link href='{{ "css/webfonts.min.css" | relURL }}' rel="stylesheet" />
-  {{ end }}
   <div class="flex items-center justify-center flex-wrap bg-gray-800 p-6 text-white">
     <div class="w-full max-w-6xl items-center text-xl text-grey-900 text-center">
       <style>
@@ -86,19 +81,19 @@
       </style>
       <div class="footer-logos">
         <div class="footer-logos-row">
-          <img alt="Monadnock 250 Logo" src="/img/newlogo.webp">
-          <img alt="NH 250 Logo" src="/img/nh250-secondary.webp">
-          <img alt="America 250" class="logo-light" src="/img/america250.svg">
-          <img alt="Arts Alive Logo" src="/img/arts-alive.webp">
-          <img alt="Keene Sentinel Logo" src="/img/sentinel.webp">
+          <img alt="Monadnock 250 Logo" src="/img/newlogo.webp" loading="lazy">
+          <img alt="NH 250 Logo" src="/img/nh250-secondary.webp" loading="lazy">
+          <img alt="America 250" class="logo-light" src="/img/america250.svg" loading="lazy">
+          <img alt="Arts Alive Logo" src="/img/arts-alive.webp" loading="lazy">
+          <img alt="Keene Sentinel Logo" src="/img/sentinel.webp" loading="lazy">
         </div>
         <div class="footer-logos-row">
-          <img alt="City Logo" src="/img/cok.webp">
-          <img alt="Historical Society Logo" src="/img/hscc.webp">
-          <img alt="Savings Bank of Walpole Logo" class="logo-light" src="/img/sbw.webp">
-          <img alt="Swampbats Logo" src="/img/swampbats.webp">
-          <img alt="MMG" class="logo-light" src="/img/mmg.webp">
-          <img alt="DAR" class="logo-light" src="/img/dar.webp">
+          <img alt="City Logo" src="/img/cok.webp" loading="lazy">
+          <img alt="Historical Society Logo" src="/img/hscc.webp" loading="lazy">
+          <img alt="Savings Bank of Walpole Logo" class="logo-light" src="/img/sbw.webp" loading="lazy">
+          <img alt="Swampbats Logo" src="/img/swampbats.webp" loading="lazy">
+          <img alt="MMG" class="logo-light" src="/img/mmg.webp" loading="lazy">
+          <img alt="DAR" class="logo-light" src="/img/dar.webp" loading="lazy">
         </div>
       </div>
     </div>

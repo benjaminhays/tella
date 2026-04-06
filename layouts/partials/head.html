@@ -9,6 +9,13 @@
 {{ if .Site.Params.icon.fontawesome }}
 <link href='{{ "/css/fa6.min.css" | relURL }}' rel="stylesheet" type="text/css">
 {{ end }}
+{{ if .Site.Params.googleFonts }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Playfair+Display:wght@800&family=Work+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
+{{ else }}
+<link href='{{ "css/webfonts.min.css" | relURL }}' rel="stylesheet" />
+{{ end }}
 {{ $styles := resources.Get "css/style.css" | postCSS }}
 {{ if hugo.IsServer }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
