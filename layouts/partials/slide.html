@@ -1,12 +1,23 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        {{ range .Site.Data.slide }}
-        <div class="swiper-slide">
-            <img src="{{ .image }}" fetchpriority="high" alt="{{ .alt }}">
-            <div class="s-fade-txt">
-                <h1 class="text-4xl {{ or .color "text-white" }}"><a href="{{ .link }}" target="_blank">{{ .title }}</a></h1>
+        {{ if ge hugo.Version "0.156.0" }}
+            {{ range hugo.Data.slide }}
+            <div class="swiper-slide">
+                <img src="{{ .image }}" fetchpriority="high" alt="{{ .alt }}">
+                <div class="s-fade-txt">
+                    <h1 class="text-4xl font-medium {{ or .color "text-white" }}"><a href="{{ .link }}" target="_blank">{{ .title }}</a></h1>
+                </div>
             </div>
-        </div>
+            {{ end }}
+        {{ else }}
+            {{ range .Site.Data.slide }}
+            <div class="swiper-slide">
+                <img src="{{ .image }}" fetchpriority="high" alt="{{ .alt }}">
+                <div class="s-fade-txt">
+                    <h1 class="text-4xl font-medium {{ or .color "text-white" }}"><a href="{{ .link }}" target="_blank">{{ .title }}</a></h1>
+                </div>
+            </div>
+            {{ end }}
         {{ end }}
     </div>
     <div class="swiper-button-prev"></div>
