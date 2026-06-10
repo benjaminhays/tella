@@ -49,10 +49,18 @@
           gap: 0.75rem;
           width: 100%;
         }
+        .sponsor-logos a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
         .sponsor-logos img {
+          display: block;
+          align-self: center;
           height: 8em;
           width: auto;
-          flex-shrink: 0;
+          max-width: 14rem;
+          flex-shrink: 1;
         }
         @media (max-width: 1024px) {
           .sponsor-logos img {
@@ -84,7 +92,7 @@
           <img alt="Mascoma Bank" src="/img/mascoma.webp" loading="lazy" />
         </a>
         <a href="https://www.cheshiremed.org/" class="flex items-center justify-center">
-           <img alt="Cheshire Medical" src="/img/dh.webp" loading="lazy" class="flex items-center justify-center">
+          <img alt="Cheshire Medical" src="/img/dh.webp" loading="lazy">
         </a>
       </div>
     </div>
